@@ -1,0 +1,34 @@
+# Quantum AI 쿡북 — 실습 노트북 실행 환경
+# Python 3.10+ 권장. 가상환경(venv/conda)에서 설치하세요.
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+# 검증 환경: 아래 버전 조합에서 전체 노트북 실행을 확인했습니다(qiskit 2.x).
+
+# ── Qiskit 코어 ───────────────────────────────
+qiskit==2.4.1
+qiskit-aer==0.17.2
+qiskit-algorithms==0.4.0
+qiskit-machine-learning==0.9.0
+qiskit-nature==0.8.0          # Part 7 페르미온 매핑·HartreeFock
+qiskit-optimization==0.7.0
+
+# ── 다른 양자 프레임워크 ─────────────────────────
+pennylane==0.42.3             # Part 3 QML 실습
+
+# ── 과학 계산 · 시각화 ──────────────────────────
+numpy==2.2.6
+scipy==1.15.3
+matplotlib==3.10.9
+networkx==3.4.2
+koreanize-matplotlib==0.1.1   # 그래프 한글 폰트(NanumGothic)
+
+# ── Jupyter 실행 도구 ──────────────────────────
+notebook>=7.0
+ipykernel>=6.29
+nbformat>=5.10
+ipython>=8.39
+
+# ── 양자 신경망 실습(Part 8.10)용 ─────────────────
+# torch는 CUDA 의존성이 커서 별도 설치를 권장합니다.
+#   CPU 전용:  pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
